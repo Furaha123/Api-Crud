@@ -1,0 +1,39 @@
+ <View style={styles.container}>
+      <Text style={styles.heading}>Add New Product</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Title"
+        value={formData.title}
+        onChangeText={(text) => handleInputChange("title", text)}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Price"
+        value={formData.price}
+        keyboardType="numeric"
+        onChangeText={(text) => handleInputChange("price", text)}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Description"
+        value={formData.description}
+        multiline
+        onChangeText={(text) => handleInputChange("description", text)}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Image URL"
+        value={formData.image}
+        onChangeText={(text) => handleInputChange("image", text)}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Category"
+        value={formData.category}
+        onChangeText={(text) => handleInputChange("category", text)}
+      />
+      <TouchableOpacity style={styles.button} onPress={handleSubmit}>
+        <Text style={styles.buttonText}>Add Product</Text>
+      </TouchableOpacity>
+    </View>
+  );
